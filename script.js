@@ -7,7 +7,7 @@ function analyze() {
     const tpsa = parseFloat(document.getElementById("inputTPSA").value);
     const num_rings = parseFloat(document.getElementById("inputRings").value);
 
-   fetch("https://cors-anywhere.herokuapp.com/https://nephrotoxicity.onrender.com/predict", {
+   fetch("https://nephrotoxicity.onrender.com/predict", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
