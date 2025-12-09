@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NephroTox AI Predictor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>NephroTox AI</h1>
+        <p>ML-Powered Nephrotoxicity Prediction Dashboard</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Input Box -->
+        <div class="card input-card">
+            <h2>Enter Drug Values</h2>
+
+            <div class="form-group">
+                <input type="text" id="inputSmiles" required>
+                <label>SMILES</label>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="input1" required>
+                <label>Molecular Weight</label>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="input2" required>
+                <label>LogP</label>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="inputHBD" required>
+                <label>HBD</label>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="inputHBA" required>
+                <label>HBA</label>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="inputTPSA" required>
+                <label>TPSA</label>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="inputRings" required>
+                <label>Number of Rings</label>
+            </div>
+
+
+            <button onclick="analyze()" class="analyze-btn">Analyze Now</button>
+        </div>
+
+        <!-- Result Box -->
+        <div class="card result-card" id="resultBox" style="display:none;">
+            <h2>Prediction Result</h2>
+
+            <div id="riskStatus" class="risk-status"></div>
+
+            <div class="gauge">
+                <div class="gauge-fill" id="gaugeFill"></div>
+                <div class="gauge-cover" id="gaugePercentage">0%</div>
+            </div>
+
+            <div class="explain-box" id="explanation"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

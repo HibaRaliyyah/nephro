@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #283c86, #45a247);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-top: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.container {
+    margin-top: 40px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-bottom-color: #00ffcc;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    transition: 0.3s;
+    pointer-events: none;
+    color: #ddd;
+}
+
+input:focus + label,
+input:valid + label {
+    top: -10px;
+    font-size: 0.85rem;
+    color: #00ffcc;
+}
+
+.analyze-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #00ffcc;
+    color: #000;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.analyze-btn:hover {
+    background: #00e6b8;
+    transform: scale(1.03);
+}
+
+/* Result Section */
+.risk-status {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Gauge */
+.gauge {
+    width: 180px;
+    height: 90px;
+    background: #ddd;
+    border-radius: 180px 180px 0 0;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.gauge-fill {
+    height: 100%;
+    background: #ff4d4d;
+    width: 0%;
+    transition: width 1s ease-in-out;
+}
+
+.gauge-cover {
+    width: 140px;
+    height: 70px;
+    background: #fff;
+    border-radius: 140px 140px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.explain-box {
+    margin-top: 20px;
+    background: #ffffff22;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
